@@ -1,0 +1,56 @@
+<!-- <p>product-edit works!</p> -->
+<div class="row">
+    <div class="col-xs-12">
+        <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-xs-12">
+                    <button 
+                        class="btn btn-success" 
+                        type="submit"
+                        [disabled]="!productForm.valid">Save</button>
+                    <button class="btn btn-danger" type="button" (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input 
+                            type="text"
+                            id="name"
+                            formControlName="name"
+                            class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea 
+                            type="text"
+                            id="description"
+                            formControlName="description"
+                            class="form-control"
+                            rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input 
+                            type="number"
+                            id="price"
+                            formControlName="price"
+                            class="form-control"
+                            #price>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
